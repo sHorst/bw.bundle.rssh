@@ -33,7 +33,7 @@ rssh_conf = [
     '#',
 ]
 
-for username, user_attrs in node.metadata.get('users', {}).items():
+for username, user_attrs in sorted(node.metadata.get('users', {}).items()):
     if user_attrs.get('shell', None) == '/usr/bin/rssh':
         umask = user_attrs.get('rssh', {}).get('umask', '022')
         accessbits = user_attrs.get('rssh', {}).get('accessbits', '000000')  # disallow everything

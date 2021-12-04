@@ -8,7 +8,7 @@ rush_conf = [
     '# $Rev: 61 $',
     '#',
     '# Set verbosity level.',
-    'debug 1',
+    'debug 0',
     '',
     '#',
     '# Default settings',

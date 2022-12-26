@@ -47,14 +47,14 @@ rush_conf = [
     '# Rsync service: chroot to the virtual server, move to home directory,',
     '#                and check paths, not to backtrack.',
     'rule rsync-home',
-    ' command ^rsync --server',
-    ' uid >= 1000',
-    ' set[0] /usr/bin/rsync',
-    ' match[$] ^([^/].*|~/.*)',
-    ' match[$] ! \.\.',
-    ' transform[$] s,^~/,./,',
-    ' umask 002',
-    ' chdir ~',
+    '  command ^rsync --server',
+    '  uid >= 1000',
+    '  set[0] /usr/bin/rsync',
+    '  match[$] ^([^/].*|~/.*)',
+    '  match[$] ! \.\.',
+    '  transform[$] s,^~/,./,',
+    '  umask 002',
+    '  chdir ~',
 
 ]
 

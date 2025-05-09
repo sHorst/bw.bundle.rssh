@@ -51,7 +51,7 @@ rush_conf = [
     '  uid >= 1000',
     '  set[0] /usr/bin/rsync',
     '  match[$] ^([^/].*|~/.*)',
-    '  match[$] ! \.\.',
+    '  match[$] ! \\.\\.',
     '  transform[$] s,^~/,./,',
     '  umask 002',
     '  chdir ~',
